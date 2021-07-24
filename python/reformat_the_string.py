@@ -34,7 +34,10 @@ import pdb
 def reformat(s):
     all_strings = []
     all_integers = []
+    new_list = []
     brokenUp = list(s)
+    stop = (len(brokenUp) / 2)
+    count = 0
    
     if (any(i.isnumeric() for i in brokenUp)) == False:
         return ""
@@ -44,8 +47,10 @@ def reformat(s):
                 all_strings.append(i)
             elif i.isnumeric() == True:
                 all_integers.append(i)
-
-    pdb.set_trace()
+        while count < stop:
+            new_list.append(all_integers[count]), new_list.append(all_strings[count])
+            count += 1
+    return "".join(new_list)
 
 attempt_one = reformat("a0b1c2")
 print(attempt_one)
