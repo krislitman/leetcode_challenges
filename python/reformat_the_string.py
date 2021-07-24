@@ -35,12 +35,15 @@ def reformat(s):
     all_strings = []
     all_integers = []
     brokenUp = list(s)
-    
-    for i in brokenUp:
-        if i.isnumeric() == False:
-            all_strings.append(i)
-        elif i.isnumeric() == True:
-            all_integers.append(i)
+   
+    if (any(i.isnumeric() for i in brokenUp)) == False:
+        return ""
+    else:
+        for i in brokenUp:
+            if i.isnumeric() == False:
+                all_strings.append(i)
+            elif i.isnumeric() == True:
+                all_integers.append(i)
 
     pdb.set_trace()
 
