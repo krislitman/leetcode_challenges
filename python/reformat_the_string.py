@@ -41,6 +41,8 @@ def reformat(s):
    
     if (any(i.isnumeric() for i in brokenUp)) == False:
         return ""
+    elif (any(i.isalpha() for i in brokenUp)) == False:
+        return ""
     else:
         for i in brokenUp:
             if i.isnumeric() == False:
@@ -52,5 +54,20 @@ def reformat(s):
             count += 1
     return "".join(new_list)
 
+
+
+
 attempt_one = reformat("a0b1c2")
 print(attempt_one)
+
+attempt_two = reformat("leetcode")
+print(attempt_two)
+
+attempt_three = reformat("1229857369")
+print(attempt_three)
+
+attempt_four = reformat("covid2019")
+print(attempt_four)
+
+attempt_five = reformat("ab123")
+print(attempt_five)
