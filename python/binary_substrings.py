@@ -41,5 +41,3 @@ print(attempt1)
 
 attempt2 = solution.countBinarySubstrings("00110011")
 print(attempt2)
-
-
