@@ -10,7 +10,7 @@
 # Example 2:
 
 # Input: strs = ["dog","racecar","car"]
-# Output: ""
+# Output:
 # Explanation: There is no common prefix among the input strings.
 
 class Solution(object):
@@ -20,8 +20,8 @@ class Solution(object):
         longest = len(max(strs)) - 1
         for str in strs:
             for i in range(longest):
-                
-                    
+
+
                     import pdb
                     pdb.set_trace()
 
