@@ -14,22 +14,27 @@
 def reverse_vowels(s)
   vowels = [
     'a', 'e', 'i', 'o', 'u',
+    'A', 'E', 'I', 'O', 'U',
   ]
   split_up = s.split('')
-  gathered = split_up.find_all {|w| w if vowels.include? w}
-  to_replace = gathered.reverse
+  gathered = (split_up.find_all {|w| w if vowels.include? w}).reverse
   count = 0
-  split_up.map do |w|
+  what = split_up.map do |w|
     if vowels.include? w
-      w = to_replace[count]
+      w = gathered[count]
       count += 1
       w
     else
       w
     end
   end
+  what.join('')
 end
 
 attempt1 = reverse_vowels('hello')
 print(attempt1)
 # expect: 'holle'
+
+attempt2 = reverse_vowels('leetcode')
+print(attempt2)
+# expect: 'leotcede'
