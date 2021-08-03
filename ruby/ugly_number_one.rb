@@ -24,3 +24,24 @@
 # Input: n = 1
 # Output: true
 # Explanation: 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.
+
+def is_ugly(n)
+  prime_factors = [1,2,3,5]
+  if n == 1
+    return true
+  elsif n > 1
+    prime_factors.include?(n/2) || prime_factors.include?(n/3) ? true : false
+  else
+    return false
+  end
+end
+
+attempt1 = is_ugly(6)
+attempt2 = is_ugly(8)
+attempt3 = is_ugly(14)
+attempt4 = is_ugly(1)
+
+print(attempt1)
+print(attempt2)
+print(attempt3)
+print(attempt4)
