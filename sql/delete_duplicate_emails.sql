@@ -19,3 +19,6 @@
 -- Note:
 
 -- Your output is the whole Person table after executing your sql. Use delete statement.
+DELETE pone FROM person pone, person ptwo
+WHERE pone.Email = ptwo.email
+AND pone.Id > ptwo.Id;
