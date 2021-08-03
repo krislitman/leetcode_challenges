@@ -15,3 +15,7 @@
 -- +----------+
 -- | Joe      |
 -- +----------+
+
+SELECT name AS Employee FROM employee e
+WHERE (SELECT em.Salary from employee em where e.ManagerId = em.Id) < e.Salary
+AND (e.ManagerId IS NOT NULL);
