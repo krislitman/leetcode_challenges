@@ -26,14 +26,21 @@
 # Explanation: 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.
 
 def is_ugly(n)
-  prime_factors = [1,2,3,5]
-  if n == 1
-    return true
-  elsif n > 1
-    prime_factors.include?(n/2) || prime_factors.include?(n/3) ? true : false
-  else
-    return false
+  return false if n <= 0
+
+  while n % 2 == 0
+    n = n/2
   end
+
+  while n % 3 == 0
+    n = n/3
+  end
+
+  while n % 5 == 0
+    n = n/5
+  end
+
+  return n == 1
 end
 
 attempt1 = is_ugly(6)
