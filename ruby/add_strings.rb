@@ -18,9 +18,7 @@
 # Output: "0"
 
 def add_strings(num1, num2)
-  require 'pry'; binding.pry
-  # new_num = num1.to_i += num2.to_i
-  # new_num.to_s
+  return (num1.to_i + num2.to_i).to_s
 end
 
 attempt1 = add_strings('11', '123')
