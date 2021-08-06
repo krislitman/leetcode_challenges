@@ -14,3 +14,15 @@
 # Input: s = "cbbd"
 # Output: 2
 # Explanation: One possible longest palindromic subsequence is "bb".
+
+def longest_palindrome_subseq(s)
+
+end
+
+attempt1 = longest_palindrome_subseq('bbbab')
+print(attempt1)
+# expect: 4
+
+# attempt2 = longest_palindrome_subseq('cbbd')
+# print(attempt2)
+# expect: 2
