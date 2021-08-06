@@ -15,6 +15,10 @@
 # Output: 2
 # Explanation: One possible longest palindromic subsequence is "bb".
 
+# Psuedocode: Going to split the string into individual elements in an array. Then I will iterate over the array,
+# and create hash objects for each distinct element. If there is more than one element, increment by one to that keys
+# value. Then I will return the max value from the hash object
+
 def longest_palindrome_subseq(s)
 
 end
