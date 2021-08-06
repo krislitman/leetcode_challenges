@@ -20,13 +20,26 @@
 # value. Then I will return the max value from the hash object
 
 def longest_palindrome_subseq(s)
-
+  split_up = s.split('')
+  count_em = split_up.reduce({}) do |acc, e|
+    if acc[e]
+      acc[e] += 1
+    else
+      acc[e] = 1
+    end
+    acc
+  end
+  count_em.values.max
 end
 
 attempt1 = longest_palindrome_subseq('bbbab')
 print(attempt1)
 # expect: 4
 
-# attempt2 = longest_palindrome_subseq('cbbd')
-# print(attempt2)
+attempt2 = longest_palindrome_subseq('cbbd')
+print(attempt2)
 # expect: 2
+
+attempt3 = longest_palindrome_subseq('aabaa')
+print(attempt3)
+# expect: 5
