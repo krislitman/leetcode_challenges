@@ -16,12 +16,28 @@
 
 # Input: nums = [1]
 # Output: 1
+import pdb
 
 class Solution(object):
     def singleNumber(self, nums):
-        return 0
+        duplicates = []
+        l = len(nums)
+        c = 0
+        while l != 0:
+            n = nums[c]
+            nums.pop(c)
+            if n in nums:
+                duplicates.append(n)
+                c += 1
+                l -= 1
+            else:
+                return n
+
+# solution = Solution()
+# attempt1 = solution.singleNumber([2,2,1])
+# print(attempt1)
 
 solution = Solution()
-attempt1 = solution.singleNumber([2,2,1])
-print(attempt1)
+attempt2 = solution.singleNumber([1,0,1])
+print(attempt2)
 
