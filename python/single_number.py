@@ -22,20 +22,18 @@ class Solution(object):
     def singleNumber(self, nums):
         duplicates = []
         l = len(nums)
-        c = 0
         while l != 0:
-            n = nums[c]
-            nums.pop(c)
-            if n in nums:
+            n = nums[0]
+            nums.pop(0)
+            if n in nums or n in duplicates:
                 duplicates.append(n)
-                c += 1
                 l -= 1
             else:
                 return n
 
-# solution = Solution()
-# attempt1 = solution.singleNumber([2,2,1])
-# print(attempt1)
+solution = Solution()
+attempt1 = solution.singleNumber([2,2,1])
+print(attempt1)
 
 solution = Solution()
 attempt2 = solution.singleNumber([1,0,1])
