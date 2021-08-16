@@ -5,7 +5,7 @@
 #   "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
 
 def to_camel_case(str)
-  s = str.split('-')
+  s = str.split(/[^a-zA-Z]/)
   s.each_with_index do |i, e|
     if e == 0
       next
@@ -18,3 +18,6 @@ end
 
 attempt1 = to_camel_case('the-stealth-warrior')
 print(attempt1)
+
+attempt2 = to_camel_case('The_Stealth_Warrior')
+print(attempt2)
