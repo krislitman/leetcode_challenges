@@ -3,3 +3,18 @@
 #   Examples
 #   "the-stealth-warrior" gets converted to "theStealthWarrior"
 #   "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+def to_camel_case(str)
+  s = str.split('-')
+  s.each_with_index do |i, e|
+    if e == 0
+      next
+    else
+      i[0] = i[0].upcase
+    end
+  end
+  return s.join('')
+end
+
+attempt1 = to_camel_case('the-stealth-warrior')
+print(attempt1)
