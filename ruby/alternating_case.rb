@@ -36,3 +36,9 @@ print(attempt3)
 
 attempt4 = to_alternating_case('HELLO world')
 print(attempt4)
+
+attempt5 = to_alternating_case('12345')
+print(attempt5)
+
+attempt6 = to_alternating_case('1a2b3c4d5e')
+print(attempt6)
