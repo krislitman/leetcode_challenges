@@ -9,3 +9,9 @@
 # "1a2b3c4d5e".to_alternating_case() === "1A2B3C4D5E"
 # "String.prototype.toAlternatingCase".to_alternating_case() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 # As usual, your function/method should be pure, i.e. it should not mutate the original string.
+
+def to_alternating_case(str)
+end
+
+attempt1 = to_alternating_case('hello world')
+print(attempt1)
