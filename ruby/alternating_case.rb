@@ -11,6 +11,18 @@
 # As usual, your function/method should be pure, i.e. it should not mutate the original string.
 
 def to_alternating_case(str)
+  if ![str].grep(/[^a-zA-Z]/)
+    return str
+  else
+    str.chars.map do |c|
+      n = c.downcase
+      if c == n
+        c.upcase
+      else
+        next
+      end
+    end.join('')
+  end
 end
 
 attempt1 = to_alternating_case('hello world')
