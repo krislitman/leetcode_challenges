@@ -19,7 +19,7 @@ def to_alternating_case(str)
       if c == n
         c.upcase
       else
-        next
+        c.downcase
       end
     end.join('')
   end
@@ -27,3 +27,12 @@ end
 
 attempt1 = to_alternating_case('hello world')
 print(attempt1)
+
+attempt2 = to_alternating_case('HELLO WORLD')
+print(attempt2)
+
+attempt3 = to_alternating_case('hello WORLD')
+print(attempt3)
+
+attempt4 = to_alternating_case('HELLO world')
+print(attempt4)
