@@ -42,3 +42,6 @@ end
 
 attempt1 = circularArrayRotation([1,2,3], 2, [0,1])
 print(attempt1)
+
+attempt2 = circularArrayRotation([1,2,3,4],1,[0,1,2,3])
+print(attempt2)
