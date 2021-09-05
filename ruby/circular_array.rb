@@ -32,3 +32,6 @@
 def circularArrayRotation(a, k, queries)
 
 end
+
+attempt1 = circularArrayRotation([1,2,3], 2, [0,1])
+print(attempt1)
