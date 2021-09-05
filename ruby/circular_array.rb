@@ -30,7 +30,14 @@
 # Each of the  subsequent lines contains a single integer, , an index of an element in  to return.
 
 def circularArrayRotation(a, k, queries)
-
+  mutated_array = a.dup
+  k.times do
+    i = mutated_array.pop
+    mutated_array.prepend(i)
+  end
+  queries.each do |i|
+    puts mutated_array[i]
+  end
 end
 
 attempt1 = circularArrayRotation([1,2,3], 2, [0,1])
