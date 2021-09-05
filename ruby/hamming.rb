@@ -12,7 +12,9 @@
 # Output: 4
 
 def total_hamming_distance(nums)
-  converted_nums = nums.map{|n| "%04b" % n}
+  converted_nums = nums.map{|n| ("%04b" % n).split('')}
+  total = 0
+  parser = 0
   require 'pry'; binding.pry
 end
 
