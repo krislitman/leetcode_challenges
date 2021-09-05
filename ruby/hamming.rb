@@ -16,3 +16,11 @@
 
 # Input: nums = [4,14,4]
 # Output: 4
+
+def total_hamming_distance(nums)
+
+end
+
+attempt1 = total_hamming_distance([4,14,2])
+print(attempt1)
+# expect: 6
