@@ -14,10 +14,23 @@
 def total_hamming_distance(nums)
   converted_nums = nums.map{|n| ("%04b" % n).split('')}
   total = 0
-  parser = 0
-  require 'pry'; binding.pry
+  i = 0
+  converted_nums.each do |num|
+    if i == 0
+      diff = num & converted_nums[-1]
+      total += diff.length
+      diff.clear
+      i += 1
+    elsif i >= 1
+      diff = num & converted_nums[i-1]
+      total += diff.length
+      diff.clear
+      i += 1
+    end
+  end
+  return total
 end
 
 attempt1 = total_hamming_distance([4,14,2])
-print(attempt1)
+puts attempt1
 # expect: 6
