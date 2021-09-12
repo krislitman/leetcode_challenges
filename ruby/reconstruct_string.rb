@@ -15,7 +15,36 @@
 # After iterating, check that the values in the array match the value of the hash key and return the integer.
 
 def original_digits(s)
-
+  zero_to_nine = {
+    "0": "zero",
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four",
+    "5": "five",
+    "6": "six",
+    "7": "seven",
+    "8": "eight",
+    "9": "nine"
+  }
+  found = []
+  zero_to_nine.each do |key,value|
+    l = value.split('').length
+    c = 0
+    value.split('').each do |e|
+      if s.split('').include? e
+        c += 1
+        if c == l
+          c = 0
+          found << key.to_s
+          break
+        end
+      else
+        break
+      end
+    end
+  end
+  return found.join('')
 end
 
 attempt1 = original_digits("owoztneoer")
