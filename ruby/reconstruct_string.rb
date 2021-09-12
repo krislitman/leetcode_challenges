@@ -47,10 +47,14 @@ def original_digits(s)
   return found.join('')
 end
 
-attempt1 = original_digits("owoztneoer")
-puts attempt1
-# expecting 012
+# attempt1 = original_digits("owoztneoer")
+# puts attempt1
+# # expecting 012
 
-attempt2 = original_digits("fviefuro")
-puts attempt2
-# expecting 45
+# attempt2 = original_digits("fviefuro")
+# puts attempt2
+# # expecting 45
+
+attempt3 = original_digits("zerozero")
+puts attempt3
+# expecting 00
