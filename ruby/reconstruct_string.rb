@@ -49,3 +49,8 @@ end
 
 attempt1 = original_digits("owoztneoer")
 puts attempt1
+# expecting 012
+
+attempt2 = original_digits("fviefuro")
+puts attempt2
+# expecting 45
