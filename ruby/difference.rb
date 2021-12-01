@@ -4,7 +4,14 @@
 
 # Return the letter that was added to t.
 
+def find_the_difference(s, t)
+  return if s.length == 0 || t.length == 0
 
+
+end
+
+attempt1 = find_the_difference("", "")
+puts attempt1
 
 # Example 1:
 
