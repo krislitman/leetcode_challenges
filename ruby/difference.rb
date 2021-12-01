@@ -6,12 +6,24 @@
 
 def find_the_difference(s, t)
   return if s.length == 0 || t.length == 0
-
-
+  split = t.split("")
+  compare = s.split("")
+  found = nil
+  split.each do |l|
+    if !compare.include?(l)
+      found = l
+    else
+      next
+    end
+  end
+  found
 end
 
-attempt1 = find_the_difference("", "")
-puts attempt1
+# attempt1 = find_the_difference("", "")
+# puts attempt1
+
+attempt2 = find_the_difference("abcd", "abcde")
+puts attempt2
 
 # Example 1:
 
