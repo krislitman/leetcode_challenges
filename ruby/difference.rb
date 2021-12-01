@@ -13,20 +13,24 @@ def find_the_difference(s, t)
     if !compare.include?(l)
       found = l
     else
+      compare.delete(l)
       next
     end
   end
   found
 end
 
-# attempt1 = find_the_difference("", "")
-# puts attempt1
+attempt1 = find_the_difference("", "")
+puts attempt1
 
-# attempt2 = find_the_difference("abcd", "abcde")
-# puts attempt2
+attempt2 = find_the_difference("abcd", "abcde")
+puts attempt2
 
 attempt3 = find_the_difference("", "y")
 puts attempt3
+
+attempt4 = find_the_difference("a", "aa")
+puts attempt4
 
 # Example 1:
 
