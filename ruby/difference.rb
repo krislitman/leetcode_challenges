@@ -32,6 +32,9 @@ puts attempt3
 attempt4 = find_the_difference("a", "aa")
 puts attempt4
 
+attempt5 = find_the_difference("ae", "aea")
+puts attempt5
+
 # Example 1:
 
 # Input: s = "abcd", t = "abcde"
