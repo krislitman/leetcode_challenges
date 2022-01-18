@@ -16,7 +16,19 @@
 # Output: [0]
 
 def merge_two_lists(list1, list2)
-
+  merged = []
+  o = list1.length
+  t = list2.length
+  c = 0
+  while o && t > 0 do
+    merged << list1[c]
+    merged << list2[c]
+    c += 1
+    o -= 1
+    t -= 1
+  end
+  merged
+  require 'pry'; binding.pry
 end
 
 puts merge_two_lists([1,2,4], [1,3,4])
