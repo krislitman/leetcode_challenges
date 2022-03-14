@@ -6,7 +6,11 @@
 # @param {String} needle
 # @return {Integer}
 def str_str(haystack, needle)
-    haystack.index(needle)
+    i = haystack.index(needle)
+    if i.nil?
+        i = -1
+    end
+    i
 end
 
 # Example 1:
