@@ -24,3 +24,11 @@ def longest_common_prefix(strs)
     end
     prefix
 end
+
+# Example 1:
+
+# Input: strs = ["flower","flow","flight"]
+# Output: "fl"
+
+one = longest_common_prefix(["flower","flow","flight"])
+puts one
