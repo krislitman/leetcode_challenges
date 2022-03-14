@@ -31,3 +31,6 @@ puts one
 
 two = str_str("aaaaa", "bba")
 puts two
+
+three = str_str("", "")
+puts three
