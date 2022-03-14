@@ -24,3 +24,6 @@ end
 
 one = str_str("hello", "ll")
 puts one
+
+two = str_str("aaaaa", "bba")
+puts two
