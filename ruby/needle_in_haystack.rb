@@ -21,3 +21,6 @@ end
 
 # Input: haystack = "", needle = ""
 # Output: 0
+
+one = str_str("hello", "ll")
+puts one
