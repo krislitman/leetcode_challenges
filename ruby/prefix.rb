@@ -32,3 +32,12 @@ end
 
 one = longest_common_prefix(["flower","flow","flight"])
 puts one
+
+# Example 2:
+
+# Input: strs = ["dog","racecar","car"]
+# Output: ""
+# Explanation: There is no common prefix among the input strings.
+
+two = longest_common_prefix(["dog","racecar","car"])
+puts two
