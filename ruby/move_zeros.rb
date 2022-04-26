@@ -3,7 +3,12 @@
 # Note that you must do this in-place without making a copy of the array.
 
 def move_zeroes(nums)
-
+    nums.each_with_index do |e, i|
+        if e == 0
+            nums.delete_at(i)
+            nums.push(e)
+        end
+    end
 end
 
 
@@ -17,8 +22,8 @@ puts move_zeroes(one)
 
 # Example 2:
 
-# two =  [0]
-# puts move_zeroes(two)
+two =  [0]
+puts move_zeroes(two)
 
 # Input: nums = [0]
 # Output: [0]
