@@ -5,6 +5,14 @@
 # It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
 
 def combination_sum(candidates, target)
+    output = []
+    i = 0
+    t = candidates.length
+    candidates.each_with_index do |candidate, index|
+        while t > 0
+            c = candidate + candidate[i]
+            if c == target
+    end
 end
 
 one = combination_sum([2,3,6,7], 7)
