@@ -9,13 +9,55 @@
 # The next state is created by applying the above rules simultaneously to every cell in the current state, where births and deaths occur simultaneously. Given the current state of the m x n grid board, return the next state.
 
 def game_of_life(board)
+    c = 0
+    ro = 0
+    new_board = board.map do |b|
+        # Grab last and next rows
+        l = board[c - 1]
+        n = board[c + 1] || [0, 0, 0]
+
+        # check & count neighboors for each element of row
+        b = b.map do |i|
+            if ro == 0
+                v = (l[0..1].sum + b[1] + n[0..1].sum) rescue nil
+                if v < 2 || v > 3
+                    i = 0
+                elsif v == 3
+                    i = 1
+                end
+            elsif ro == 1
+                v = (l.sum + n.sum + b[0] + b[2])
+                if v < 2 || v > 3
+                    i = 0
+                elsif v == 3
+                    i = 1
+                end
+            elsif ro == 2
+                v = (l[1..2].sum + n[1..2].sum + b[1])
+                if v < 2 || v > 3
+                    i = 0
+                elsif v == 3
+                    i = 1
+                end
+            end
+            ro += 1
+            i
+        end
+        # increment c each row
+        c += 1
+
+        # clear row each iteration
+        ro = 0
+        b
+    end
+    new_board
 end
 
 # Test One
 
 board1 = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
 
-print game_of_life(board1)
+# print game_of_life(board1)
 
 # Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
 
