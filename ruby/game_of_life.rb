@@ -11,3 +11,18 @@
 def game_of_life(board)
 end
 
+# Test One
+
+board1 = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
+
+print game_of_life(board1)
+
+# Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
+
+# Test Two
+
+board2 = [[1,1],[1,0]]
+
+# print game_of_life(board2)
+
+# Output: [[1,1],[1,1]]
