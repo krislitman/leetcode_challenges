@@ -46,13 +46,13 @@ end
 
 # Example 1:
 
-print roman_to_int("III")
+# print roman_to_int("III")
 # Output: 3
 # Explanation: III = 3.
 
 # Example 2:
 
-print roman_to_int("LVIII")
+# print roman_to_int("LVIII")
 # Output: 58
 # Explanation: L = 50, V= 5, III = 3.
 
