@@ -4,38 +4,44 @@
 
 # Open brackets must be closed by the same type of brackets.
 # Open brackets must be closed in the correct order.
-
+import pdb
 class Solution(object):
     def isValid(self, the_string):
-        right = [")", "]", "}"]
-        left = ["(", "[", "{"]
+        p = {')':'(', ']':'[', '}':'{'}
+        b = True
+        f = []
         for char in the_string:
-            if char in right:
-                found = right.index(char)
-                return left[found] in the_string
-            elif char in left:
-                found = left.index(char)
-                flip = right[found]
-                new_char = the_string.index(flip)
-                import pdb
-                pdb.set_trace()
-                return right[found] in the_string
+            if char == list(p.keys())[0] or char == list(p.keys())[1] or char == list(p.keys())[2]:
+                f.append(char)
+            else:
+                if len(f) == 0:
+                    b = False
+                    break
+                elif p[char] and p[char] == f[-1]:
+                    f.pop()
+                else:
+                    f.append(char)
+                    b = False
+        if len(f) == 0 and b == True:
+            print("True")
+        else:
+            print("False")
+
 
 
 solution = Solution()
-attempt1 = solution.isValid("()")
+print(solution.isValid("()"))
 # true
 
-attempt2 = solution.isValid("()[]{}")
+# attempt2 = solution.isValid("()[]{}")
+# # true
+
+# attempt3 = solution.isValid("(]")
+# # false
+
+# attempt5 = solution.isValid("{[]}")
 # true
 
-attempt3 = solution.isValid("(]")
-# false
-
-attempt5 = solution.isValid("{[]}")
-# true
-
-print(attempt1)
-print(attempt2)
-print(attempt3)
-print(attempt5)
+# print(attempt2)
+# print(attempt3)
+# print(attempt5)
