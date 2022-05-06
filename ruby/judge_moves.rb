@@ -6,6 +6,9 @@
 
 # Note: The way that the robot is "facing" is irrelevant. 'R' will always make the robot move to the right once, 'L' will always make it move left, etc. Also, assume that the magnitude of the robot's movement is the same for each move.
 
+def judge_circle(moves)
+
+end
 
 
 # Example 1:
