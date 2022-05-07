@@ -23,7 +23,13 @@
 
 
 def remove_duplicates(nums)
-    nums.length > 1 ? nums.uniq!.length : 1
+    if nums.length > 1
+        n = nums & nums
+        n = n.length
+    else
+        n = 1
+    end
+    n
 end
 
 # Example 1:
@@ -43,3 +49,5 @@ print remove_duplicates([0,0,1,1,1,2,2,3,3,4])
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
 print remove_duplicates([1])
+
+print remove_duplicates([1,2])
