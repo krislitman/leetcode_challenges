@@ -30,16 +30,16 @@ def biggerIsGreater(w)
     w = w.split("").map{|i| i.ord}
     # reverse iterate, and if the next value is less than current value swap and break
     l = w.length - 1
-    s = l - 1
+    c = -1
     while l > 0
         # if the previous value is greater than current, swap and break
-        if w[s] > w[s + 1]
-            temp_one = w[s]
-            temp_two = w[s + 1]
-            w[s], w[s + 1] = temp_two, temp_one
+        if w[c] > w[c - 1]
+            temp_one = w[c]
+            temp_two = w[c - 1]
+            w[c], w[c - 1] = temp_two, temp_one
             break
         # if the numbers are equal, return the string of no answer
-        elsif w[s] == w[s + 1]
+        elsif w[c] == w[c - 1]
             return "no answer"
         end
         l -= 1
@@ -48,8 +48,8 @@ def biggerIsGreater(w)
     w.map{|i| i.chr}.join("")
 end
 
-print(biggerIsGreater("ab"))
-print(biggerIsGreater("bb"))
+# print(biggerIsGreater("ab"))
+# print(biggerIsGreater("bb"))
 # print(biggerIsGreater("hefg"))
 # print(biggerIsGreater("dhck"))
 # print(biggerIsGreater("dkhc"))
