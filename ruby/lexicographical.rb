@@ -26,7 +26,22 @@
 # Each of the next  lines contains .
 
 def biggerIsGreater(w)
-
+    # going to convert string into int array after converting each string into ord value
+    w = w.split("").map{|i| i.ord}
+    # reverse iterate, and if the next value is less than current value swap and break
+    l = w.length - 1
+    s = l - 1
+    while l > 0
+        if w[s] > w[s + 1]
+            temp_one = w[s]
+            temp_two = w[s + 1]
+            w[s], w[s + 1] = temp_two, temp_one
+            break
+        end
+        l -= 1
+    end
+    # convert/join each ordinal value in array back to character with chr method and map
+    w.map{|i| i.chr}.join("")
 end
 
 print(biggerIsGreater("ab"))
