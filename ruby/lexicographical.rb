@@ -24,3 +24,7 @@
 
 # The first line of input contains , the number of test cases.
 # Each of the next  lines contains .
+
+def biggerIsGreater(w)
+
+end
