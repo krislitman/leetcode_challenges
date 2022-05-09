@@ -32,11 +32,15 @@ def biggerIsGreater(w)
     l = w.length - 1
     s = l - 1
     while l > 0
+        # if the previous value is greater than current, swap and break
         if w[s] > w[s + 1]
             temp_one = w[s]
             temp_two = w[s + 1]
             w[s], w[s + 1] = temp_two, temp_one
             break
+        # if the numbers are equal, return the string of no answer
+        elsif w[s] == w[s + 1]
+            return "no answer"
         end
         l -= 1
     end
@@ -45,7 +49,7 @@ def biggerIsGreater(w)
 end
 
 print(biggerIsGreater("ab"))
-# print(biggerIsGreater("bb"))
+print(biggerIsGreater("bb"))
 # print(biggerIsGreater("hefg"))
 # print(biggerIsGreater("dhck"))
 # print(biggerIsGreater("dkhc"))
