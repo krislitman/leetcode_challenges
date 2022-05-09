@@ -28,3 +28,15 @@
 def biggerIsGreater(w)
 
 end
+
+print(biggerIsGreater("ab"))
+# print(biggerIsGreater("bb"))
+# print(biggerIsGreater("hefg"))
+# print(biggerIsGreater("dhck"))
+# print(biggerIsGreater("dkhc"))
+
+# ba
+# no answer
+# hegf
+# dhkc
+# hcdk
