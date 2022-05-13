@@ -1,3 +1,7 @@
+
+
+
+
 # Complete the 'countApplesAndOranges' function below.
 #
 # The function accepts following parameters:
