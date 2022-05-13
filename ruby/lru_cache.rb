@@ -11,12 +11,12 @@ class LRUCache
     attr_reader :cache
 
     def initialize(capacity)
+        @capacity = capacity
         @cache = {}
-        @key = -1
     end
 
     def get(key)
-
+        cache[key] || -1
     end
 
     def put(key, value)
