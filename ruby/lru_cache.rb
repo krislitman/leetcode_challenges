@@ -13,6 +13,8 @@ class LRUCache
     def initialize(capacity)
         @capacity = capacity
         @cache = {}
+        @key = nil
+        @c_arr = []
     end
 
     def get(key)
@@ -20,10 +22,21 @@ class LRUCache
     end
 
     def put(key, value)
+
         pair = {
             key => value
         }
-        cache.merge! pair
+
+        # if cache.keys.length == capacity
+        # else
+            @key = key
+            cache.merge! pair
+            add_to_c_arr(key)
+        # end
+    end
+
+    def add_to_c_arr(key)
+        @c_arr << key
     end
 end
 
