@@ -60,10 +60,18 @@ require "minitest/autorun"
 
 class TestCache < Minitest::Test
   def setup
-    @cache = LRUCache.new(2)
+    @lru = LRUCache.new(2)
   end
 
   def test_it_exists
-    assert_instance_of(LRUCache, @cache)
+    assert_instance_of(LRUCache, @lru)
+  end
+
+  def test_functionality
+    @lru.put(1,1)
+    one = {
+        1 => 1
+    }
+    assert_equal(@lru.cache, one)
   end
 end
