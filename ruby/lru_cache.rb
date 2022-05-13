@@ -109,5 +109,6 @@ class TestCache < Minitest::Test
     }
     @lru.put(3,3)
     assert_equal(three, @lru.cache)
+    assert_equal(-1, @lru.get(2))
   end
 end
