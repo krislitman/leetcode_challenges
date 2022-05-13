@@ -8,11 +8,13 @@
 # The functions get and put must each run in O(1) average time complexity.
 
 class LRUCache
+    attr_reader :cache
 #     =begin
 #     :type capacity: Integer
 # =ends
     def initialize(capacity)
-
+        @cache = {}
+        @key = -1
     end
 
 
@@ -31,7 +33,10 @@ class LRUCache
     :rtype: Void
 =end
     def put(key, value)
-
+        pair = {
+            key => value
+        }
+        cache.merge! pair
     end
 end
 
@@ -72,6 +77,6 @@ class TestCache < Minitest::Test
     one = {
         1 => 1
     }
-    assert_equal(@lru.cache, one)
+    assert_equal(one, @lru.cache)
   end
 end
