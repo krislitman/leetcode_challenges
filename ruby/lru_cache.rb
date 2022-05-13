@@ -18,7 +18,12 @@ class LRUCache
     end
 
     def get(key)
-        cache[key] || -1
+        if cache[key]
+            adjust_c_arr(key)
+            cache[key]
+        else
+            -1
+        end
     end
 
     def put(key, value)
@@ -27,16 +32,28 @@ class LRUCache
             key => value
         }
 
-        # if cache.keys.length == capacity
-        # else
+        if cache.keys.length == @capacity
+            remove = @c_arr.last
+            cache.delete(remove)
+
             @key = key
             cache.merge! pair
             add_to_c_arr(key)
-        # end
+        else
+            @key = key
+            cache.merge! pair
+            add_to_c_arr(key)
+        end
+    end
+
+    def adjust_c_arr(key)
+        least = @c_arr[0]
+        curr = @c_arr.index(key)
+        @c_arr[0], @c_arr[curr] = curr, least
     end
 
     def add_to_c_arr(key)
-        @c_arr << key
+        @c_arr.unshift(key)
     end
 end
 
