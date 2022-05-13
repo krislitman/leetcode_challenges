@@ -9,29 +9,16 @@
 
 class LRUCache
     attr_reader :cache
-#     =begin
-#     :type capacity: Integer
-# =ends
+
     def initialize(capacity)
         @cache = {}
         @key = -1
     end
 
-
-=begin
-    :type key: Integer
-    :rtype: Integer
-=end
     def get(key)
 
     end
 
-
-=begin
-    :type key: Integer
-    :type value: Integer
-    :rtype: Void
-=end
     def put(key, value)
         pair = {
             key => value
@@ -39,7 +26,6 @@ class LRUCache
         cache.merge! pair
     end
 end
-
 
 # Example 1:
 
