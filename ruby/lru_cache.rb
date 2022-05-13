@@ -34,6 +34,7 @@ class LRUCache
 
         if cache.keys.length == @capacity
             remove = @c_arr.last
+            delete_from_c_arr(remove)
             cache.delete(remove)
 
             @key = key
@@ -50,6 +51,10 @@ class LRUCache
         least = @c_arr[0]
         curr = @c_arr.index(key)
         @c_arr[0], @c_arr[curr] = curr, least
+    end
+
+    def delete_from_c_arr(key)
+        @c_arr.delete_if{|i| i == key}
     end
 
     def add_to_c_arr(key)
