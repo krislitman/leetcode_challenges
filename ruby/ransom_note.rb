@@ -28,9 +28,11 @@ class RansomNoteTest < Minitest::Test
     def test_case_one
         assert_equal(false, can_construct("a", "b"))
     end
-    # def test_case_two
-    #     assert_equal(false, can_construct("aa", "ab"))
-    # end
+
+    def test_case_two
+        assert_equal(false, can_construct("aa", "ab"))
+    end
+
     # def test_case_three
     #     assert_equal(true, can_construct("aa", "aab"))
     # end
