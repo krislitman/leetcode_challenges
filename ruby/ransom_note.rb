@@ -13,7 +13,7 @@ def can_construct(ransom_note, magazine)
     l = ransom_note.length
     c = 0
     ransom_dup = ransom_note.split("")
-    magazine.split("").each_with_index do |element, letter|
+    magazine.split("").each_with_index do |letter, element|
         if ransom_dup.include?(letter)
             c += 1
             i = ransom_dup.index(letter)
@@ -33,7 +33,7 @@ class RansomNoteTest < Minitest::Test
         assert_equal(false, can_construct("aa", "ab"))
     end
 
-    # def test_case_three
-    #     assert_equal(true, can_construct("aa", "aab"))
-    # end
+    def test_case_three
+        assert_equal(true, can_construct("aa", "aab"))
+    end
 end
