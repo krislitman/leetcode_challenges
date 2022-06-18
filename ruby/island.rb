@@ -1,5 +1,7 @@
 #   Island Perimeter
 
+require "minitest/autorun"
+
     # You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.
 
     # Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
@@ -8,4 +10,12 @@
 
 def island_perimeter(grid)
 
+end
+
+class IslandTest < MiniTest::Test
+    def test_case_one
+        grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
+
+        assert_equal(16, island_perimeter(grid))
+    end
 end
