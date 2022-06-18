@@ -31,15 +31,15 @@
 
 def icecreamParlor(m, arr)
     indices = []
-    arr.each do |a|
+    value = nil
+    arr.each_with_index do |a, e|
         if indices.empty?
             if a < m
-                i = arr.index(a) + 1
-                indices << i
+                indices << e + 1
+                value = a
             end
-        elsif a < m && a + indices.first == m
-            i = arr.index(a) + 1
-            indices << i
+        elsif a < m && a + value == m
+            indices << e + 1
         end
     end
     indices
@@ -49,3 +49,7 @@ end
 test_one = icecreamParlor(4, [1, 4, 5, 3, 2])
 puts test_one
 # expected => [1, 4]
+
+test_two = icecreamParlor(4, [2, 2, 4, 3])
+puts test_two
+# expected => [1, 2]
