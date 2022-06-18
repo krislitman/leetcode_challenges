@@ -1,8 +1,15 @@
+# def contains_duplicate(nums)
+#   one = nums.length
+#   two = nums.uniq.length
+#   return false if one == two
+#   true
+# end
+
 def contains_duplicate(nums)
-  one = nums.length
-  two = nums.uniq.length
-  return false if one == two
-  true
+    l = nums.length
+    clone = nums.dup
+    result = clone & nums
+    result.length != l  ? true : false
 end
 
 p contains_duplicate([1,2,3,1])
