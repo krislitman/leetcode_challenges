@@ -30,9 +30,22 @@
 
 
 def icecreamParlor(m, arr)
-
+    indices = []
+    arr.each do |a|
+        if indices.empty?
+            if a < m
+                i = arr.index(a) + 1
+                indices << i
+            end
+        elsif a < m && a + indices.first == m
+            i = arr.index(a) + 1
+            indices << i
+        end
+    end
+    indices
 end
 
 
-test_one = icecreamParlor(4, [[1, 4, 5, 3, 2]])
+test_one = icecreamParlor(4, [1, 4, 5, 3, 2])
 puts test_one
+# expected => [1, 4]
