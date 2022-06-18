@@ -27,3 +27,12 @@
 # The integer , the number of flavors offered at the time.
 #  space-separated integers denoting the cost of each flavor: .
 # Note: The index within the cost array represents the flavor of the ice cream purchased.
+
+
+def icecreamParlor(m, arr)
+
+end
+
+
+test_one = icecreamParlor(4, [[1, 4, 5, 3, 2]])
+puts test_one
