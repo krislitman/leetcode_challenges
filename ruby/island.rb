@@ -9,7 +9,25 @@ require "minitest/autorun"
     # The island doesn't have "lakes", meaning the water inside isn't connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don't exceed 100. Determine the perimeter of the island.
 
 def island_perimeter(grid)
+    water_count = 0
+    grid.each_with_index do |g, r|
+        g.each_with_index do |j, i|
+            index = [r, i]
+            result = check_for_water(j, index, grid)
+            water_count += result
+        end
+    end
+    water_count
+end
 
+def check_for_water(point, index, grid)
+    hsh_map = {
+        up: [[-1], [0]],
+        down: [1, 0],
+        left: [0, -1],
+        right: [0, 1]
+    }
+    require 'pry'; binding.pry
 end
 
 class IslandTest < MiniTest::Test
